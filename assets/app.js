@@ -348,10 +348,10 @@ function ensureModal() {
           </div>
         </div>
 
-        <p class="modal-q">Понравился ли вам такой жанр и такой геймплей?</p>
+        <p class="modal-q">Понравился ли тебе такой жанр и такой геймплей?</p>
 
         <div class="name-field" id="mNameWrap">
-          <label for="mName">Ваше имя (чтобы я знал, чьи отзывы):</label>
+          <label for="mName">Ваше имя (чисто формальность):</label>
           <input id="mName" type="text" maxlength="40" placeholder="Например, Алексей" autocomplete="off">
         </div>
 
