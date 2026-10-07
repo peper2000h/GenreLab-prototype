@@ -279,7 +279,7 @@ function updateProgressUI() {
 }
 
 /* ---------- Карточки ---------- */
-const GAME_DIR = "/game/";
+const GAME_DIR = "/GenreLab/game/";
 
 function cardHTML(g, i) {
   const r = getRatings()[g.id];
