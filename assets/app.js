@@ -840,7 +840,10 @@ async function renderStats() {
       if (!document.hidden) renderStats();
     }, 30000);
   }
+   initScrollReveal();
 }
+
+
 
 function escapeHTML(s) {
   return String(s).replace(
