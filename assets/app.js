@@ -229,13 +229,13 @@ function renderChrome() {
       `<a class="nav-link${active ? " active" : ""}" href="${href}">${label}</a>`;
     header.innerHTML = `
       <div class="container header-inner">
-        <a class="brand" href="/index.html">
+        <a class="brand" href="index.html">
           <span class="brand-mark">🎮</span>
           <span class="brand-text"><b>GenreLab</b><small>командный проект · 2D игры</small></span>
         </a>
         <nav class="nav">
-          ${link("/index.html", "Игры", isIndex)}
-          ${link("/stats.html", "Статистика", cur === "stats.html")}
+          ${link("index.html", "Игры", isIndex)}
+          ${link("stats.html", "Статистика", cur === "stats.html")}
         </nav>
         <div class="header-progress" id="headerProgress"></div>
       </div>`;
@@ -247,8 +247,8 @@ function renderChrome() {
       <div class="container footer-inner">
         <div>© ${new Date().getFullYear()} GenreLab — учебный командный проект.</div>
         <div class="footer-links">
-          <a href="/index.html">Игры</a>
-          <a href="/stats.html">Статистика</a>
+          <a href="index.html">Игры</a>
+          <a href="stats.html">Статистика</a>
         </div>
       </div>`;
   }
@@ -279,7 +279,7 @@ function updateProgressUI() {
 }
 
 /* ---------- Карточки ---------- */
-const GAME_DIR = "/GenreLab/game/";
+const GAME_DIR = "game/";
 
 function cardHTML(g, i) {
   const r = getRatings()[g.id];
@@ -370,7 +370,7 @@ function ensureModal() {
         <p>Спасибо! Оценка сохранена.</p>
         <div class="modal-actions">
           <button class="btn btn-primary" id="mNext">Следующая игра →</button>
-          <a class="btn btn-ghost" href="/stats.html">📊 Смотреть статистику</a>
+          <a class="btn btn-ghost" href="stats.html">📊 Смотреть статистику</a>
         </div>
       </div>
     </div>`;
@@ -434,7 +434,7 @@ function ensureModal() {
       location.href = GAME_DIR + nxt.file;
     } else {
       closeModal();
-      location.href = "/stats.html";
+      location.href = "stats.html";
     }
   });
 
@@ -548,7 +548,7 @@ function initGamePage() {
     e.preventDefault();
     const id = document.body.dataset.game;
     if (id) localStorage.setItem(PENDING_KEY, id);
-    location.href = "/index.html";
+    location.href = "index.html";
   });
 }
 
@@ -708,7 +708,7 @@ async function renderStats() {
         <div class="big">🗳️</div>
         <h3 style="margin:0 0 8px">Пока нет ни одной оценки</h3>
         <p style="margin:0 0 20px">Пройдите хотя бы один прототип и поставьте ❤️ или 👎.</p>
-        <a class="btn btn-primary" href="/index.html">Перейти к играм</a>
+        <a class="btn btn-primary" href="index.html">Перейти к играм</a>
       </div>`;
     root.innerHTML = html;
     return;
