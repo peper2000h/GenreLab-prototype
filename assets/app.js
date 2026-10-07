@@ -245,7 +245,9 @@ function renderChrome() {
   if (footer) {
     footer.innerHTML = `
       <div class="container footer-inner">
-        <div>© ${new Date().getFullYear()} GenreLab — учебный командный проект.</div>
+        <div>© ${new Date().getFullYear()} GenreLab — учебный командный проект | 7 прототипов | Одна цель: Выбрать жанр игры для проекта.</div>
+         <br>
+        <div>by Maks</div>
         <div class="footer-links">
           <a href="index.html">Игры</a>
           <a href="stats.html">Статистика</a>
